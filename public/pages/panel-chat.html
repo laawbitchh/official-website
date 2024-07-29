@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Rhoades | Chat</title>
+    <link rel="icon" href="../src/icon.svg" type="image/x-icon"> 
+    <link rel="stylesheet" href="../css/panel-chat.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="http://localhost:3000/panel" style="text-decoration: none; color: white;">
+            <span class="back-button">←</span>
+        </a>
+        <div class="title" id="username">Nom de la Personne</div>
+    </div>
+    <div class="chat-area" id="chatArea">
+        <!-- Ajoutez d'autres messages ici -->
+    </div>
+    <div class="input-container">
+        <input type="text" id="messageInput" placeholder="Écrivez un message...">
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+    <script src="../js/panel-chat.js"></script>
+</body>
+</html>

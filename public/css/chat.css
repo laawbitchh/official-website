@@ -1,0 +1,250 @@
+html {
+    background-color: #0C0F14;
+    scrollbar-width: none; /* Masque la scrollbar */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0C0F14;
+    color: #F9F9FA;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-left: 1px solid #1D1E20;
+    border-right: 1px solid #1D1E20;
+    -ms-overflow-style: none;
+
+    @media (max-width: 768px) {
+        margin-left: 0px; /* Ajustement pour les écrans plus petits */
+        margin-right: 0px; /* Ajustement pour les écrans plus petits */
+      }
+}
+
+.navbar-container {
+    display: flex;
+    align-items: left;
+    padding: 10px;
+    background-color: #0C0F14;
+    color: #F9F9FA;
+    border-bottom: 1px solid #1D1E20;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.back-button img {
+    width: 31px; /* Taille de l'icône */
+    height: 31px; /* Taille de l'icône */
+}
+
+.pfp-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.pfp-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: red; /* Couleur du point rouge */
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-text {
+    font-size: 12px;
+    color: #888;
+}
+
+.navbar-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end; /* Alignement du contenu à droite */
+    margin-left: auto; /* Pour s'assurer qu'il est aligné complètement à droite */
+}
+
+.icon {
+    margin-top: 10px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 21px; /* Taille de l'icône PNG */
+    height: 21px; /* Taille de l'icône PNG */
+}
+
+.container {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #0C0F14;
+    display: flex;
+    flex-direction: column-reverse; /* Inverse l'ordre d'affichage */
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+    scrollbar-width: none; /* Pour Firefox */
+    -ms-overflow-style: none;
+}
+
+.date {
+    color: #888;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 20px;
+}
+
+  
+.message-sample {
+    margin-top: 3px; /* Espace entre les messages */
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.message-sample.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left .profile-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message-content {
+    background-color: #E84FCE; /* Rose */
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    max-width: 70%; /* Largeur maximale de la bulle */
+    margin-left: 50px;
+    position: relative; /* Position relative pour aligner le texte */
+}
+
+.message-text {
+    margin: 0;
+    font-size: 14px;
+    text-align: left; /* Centrer le texte horizontalement */
+    line-height: 1.5; /* Espacement des lignes pour un meilleur espacement */
+    white-space: normal; /* Permettre le retour à la ligne automatique */
+    word-wrap: break-word; /* Casser les mots longs */
+}
+
+.left .message-content {
+    background-color: #25282D;
+    border-radius: 20px;
+}
+
+.right .message-sample {
+    justify-content: flex-end; /* Aligner à droite */
+}
+
+.right .message-content {
+    align-self: flex-end; /* Alignement du contenu à droite */
+    margin-left: auto; /* Pour s'assurer qu'il est aligné complètement à droite */
+    max-width: 70%; /* Largeur maximale de la bulle */
+}
+
+.right .message-text {
+    text-align: left; /* Aligner le texte à droite */
+}
+
+
+.input-container {
+    display: flex;
+    padding: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px 62px 15px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #1D1E20;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#send-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #E84FCE;
+    border: none;
+    border-radius: 20px;
+    width: 62px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#send-button img {
+    width: 28px;
+    height: 28px;
+}
+
+#send-button:hover {
+    background-color: #d81b60;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
